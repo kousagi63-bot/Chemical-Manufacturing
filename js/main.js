@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-2": {
       title: "High-Performance Polymer Development",
       category: "Speciality",
-      image: "images/unsplash_24.webp",
+      image: "images/image6.webp",
       description: "Synthesizing a next-generation lightweight thermoplastic polymer designed for high-stress structural components in electric vehicle frames. The polymer exhibits twice the structural strength of typical ABS plastics while maintaining a 20% lower density.",
       challenge: "Maintaining precise reaction temperatures in large batch sizes, as exothermic polymerizations run the risk of thermal runaway and material crystallization defects.",
       solution: "Implemented an automated microfluidic reactor line coupled with real-time infrared spectroscopy monitoring. This allows immediate feedback adjustments to stabilizer feeding rates.",
