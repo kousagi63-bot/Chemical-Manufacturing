@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-1": {
       title: "Petrochemical Refinery Expansion",
       category: "Petrochemical",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_23.webp",
       description: "Scale expansion of our catalytic cracking unit at the Southern Refinery Complex. The project integrates state-of-the-art flow automation, boosting overall ethylene production capacity by 35% while upgrading gas scrubbers to comply with modern clean air initiatives.",
       challenge: "Executing heavy industrial structural upgrades and piping configurations within an active high-pressure refinery zone without disrupting ongoing chemical synthesis workflows.",
       solution: "We deployed modular construction strategies, assembling critical pipelines and reactors off-site. The modules were integrated using phased scheduled shutdowns, limiting total production downtime to just 72 hours.",
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-2": {
       title: "High-Performance Polymer Development",
       category: "Speciality",
-      image: "https://images.unsplash.com/photo-1532187863486-abf9d39d66e8?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_24.webp",
       description: "Synthesizing a next-generation lightweight thermoplastic polymer designed for high-stress structural components in electric vehicle frames. The polymer exhibits twice the structural strength of typical ABS plastics while maintaining a 20% lower density.",
       challenge: "Maintaining precise reaction temperatures in large batch sizes, as exothermic polymerizations run the risk of thermal runaway and material crystallization defects.",
       solution: "Implemented an automated microfluidic reactor line coupled with real-time infrared spectroscopy monitoring. This allows immediate feedback adjustments to stabilizer feeding rates.",
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-3": {
       title: "Bio-Agrochemical Formulation",
       category: "Agrochem",
-      image: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_25.webp",
       description: "Engineering an organic agricultural solution that enhances nutrient uptake in grain crops. The formulation uses plant-derived amino acids and microbial agents, providing high resistance to drought and root pathogens.",
       challenge: "Ensuring long shelf-life and chemical stability of the biological microorganisms suspended in liquid organic emulsions.",
       solution: "Designed a lipid-based microencapsulation matrix. The protective matrix keeps biological agents dormant until applied in soil, dissolving slowly to release active components over 30 days.",
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-4": {
       title: "Eco-Friendly Catalyst R&D",
       category: "R&D",
-      image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_12.webp",
       description: "Developing a novel zeolite-based transition metal catalyst for nitrogen oxide (NOx) emission reduction in industrial boiler exhausts. The research focuses on catalyst activity at lower operational temperatures.",
       challenge: "Standard metal catalysts deteriorate rapidly in high-sulfur emissions. We had to modify the crystal lattice structure of the zeolite support to inhibit acid poisoning.",
       solution: "Engineered a specific aluminum-silicate framework laced with copper-nanoparticles. This increases sulfur tolerance by 300% and extends average catalyst lifespans to over 5 years.",
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-5": {
       title: "Speciality Chemical Batch Plant",
       category: "Speciality",
-      image: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_26.webp",
       description: "Designing and commissioning an automated multi-purpose chemical synthesis batch plant. The plant manufactures fine chemical intermediates for pharmaceutical developers and food stabilizers.",
       challenge: "Building a highly flexible reactor configuration capable of switching synthesis paths without cross-contamination between pharmaceutical-grade batches.",
       solution: "Installed CIP (Clean-in-Place) automated solvent washing cycles and a fully automated valve matrix to isolate pipelines, validated using inline chromatographic purity sensors.",
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "project-6": {
       title: "Industrial Wastewater Purification",
       category: "Eco-Friendly",
-      image: "https://images.unsplash.com/photo-1548345680-f5475ea5df84?auto=format&fit=crop&q=80&w=800",
+      image: "images/unsplash_27.webp",
       description: "Upgrading a chemical manufacturing plant's wastewater treatment facility. The new system integrates advanced oxidation processes (AOP) with membrane bioreactors, ensuring zero-liquid discharge (ZLD).",
       challenge: "Treating complex effluents containing halogenated organic compounds, which resist standard biological treatments and clog filter membranes.",
       solution: "Combined UV/Hydrogen Peroxide oxidation towers upstream to break down halogenated rings, followed by robust ceramic nano-filtration membranes which have long lifespans under abrasive washings.",
@@ -580,5 +580,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ==========================================
+  // VIDEO BACKGROUND AUTOPLAY FALLBACK
+  // ==========================================
+  document.querySelectorAll('.hero-bg-video, .banner-bg-video').forEach(v => {
+    v.play().catch(() => {});
+  });
 
 });

@@ -14,6 +14,8 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
     }
     .error-code {
       font-size: 8rem;
@@ -21,18 +23,114 @@
       color: var(--primary);
       line-height: 1;
       margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+      animation: pulse-glow 3s ease-in-out infinite, glitch 8s ease-in-out infinite;
     }
     .error-title {
       font-size: 2rem;
       font-weight: 700;
       color: var(--secondary);
       margin-bottom: 15px;
+      animation: fade-in-up 0.8s ease-out 0.2s both;
     }
     .error-desc {
       color: var(--text-muted);
       max-width: 500px;
       margin: 0 auto 30px;
       line-height: 1.7;
+      animation: fade-in-up 0.8s ease-out 0.4s both;
+    }
+    .error-page .btn {
+      animation: fade-in-up 0.8s ease-out 0.6s both;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+      50% { transform: translateY(-20px) rotate(var(--r, 0deg)); }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+      50% { transform: translateY(-15px) rotate(var(--r, 0deg)); }
+    }
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes spin-slow-reverse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+      50% { text-shadow: 0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.2); }
+    }
+    @keyframes glitch {
+      0%, 90%, 100% { transform: translate(0); }
+      92% { transform: translate(-3px, 2px); }
+      94% { transform: translate(3px, -1px); }
+      96% { transform: translate(-2px, -2px); }
+      98% { transform: translate(2px, 1px); }
+    }
+    @keyframes fade-in-up {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .doodle {
+      position: absolute;
+      opacity: 0.12;
+      z-index: 0;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite;
+      --r: 0deg;
+    }
+    .doodle-1 { top: 8%; left: 6%; font-size: 5rem; color: var(--primary); --r: -15deg; animation-duration: 7s; }
+    .doodle-2 { top: 12%; right: 8%; font-size: 4rem; color: var(--secondary); --r: 25deg; animation-duration: 5s; }
+    .doodle-3 { bottom: 15%; left: 10%; font-size: 6rem; color: var(--primary); --r: 10deg; animation-duration: 8s; animation-name: float-delayed; }
+    .doodle-4 { bottom: 18%; right: 6%; font-size: 3.5rem; color: var(--secondary); --r: -20deg; animation-duration: 6.5s; animation-name: float-delayed; }
+    .doodle-5 { top: 40%; left: 3%; font-size: 2.5rem; color: var(--primary); --r: 0deg; animation-duration: 9s; }
+    .doodle-6 { top: 35%; right: 4%; font-size: 3rem; color: var(--secondary); --r: 30deg; animation-duration: 5.5s; }
+    .doodle-7 { bottom: 35%; left: 5%; font-size: 2rem; color: var(--primary); --r: -10deg; animation-duration: 7.5s; animation-name: float-delayed; }
+    .doodle-8 { bottom: 30%; right: 8%; font-size: 2.8rem; color: var(--secondary); --r: 15deg; animation-duration: 6s; }
+    .doodle-9 { top: 5%; left: 45%; font-size: 1.8rem; color: var(--accent); --r: 0deg; animation: spin-slow 12s linear infinite; opacity: 0.1; }
+    .doodle-10 { top: 70%; left: 20%; font-size: 1.5rem; color: var(--accent); --r: 45deg; animation: spin-slow-reverse 15s linear infinite; opacity: 0.1; }
+    .doodle-circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.15); opacity: 0.8; }
+    }
+    @keyframes breathe2 {
+      0%, 100% { transform: scale(1) translateY(0); opacity: 0.5; }
+      50% { transform: scale(1.1) translateY(-20px); opacity: 0.7; }
+    }
+
+    .doodle-circle-1 {
+      width: 500px; height: 500px;
+      top: -100px; right: -150px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      animation: breathe 4s ease-in-out infinite;
+    }
+    .doodle-circle-2 {
+      width: 400px; height: 400px;
+      bottom: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(0, 48, 73, 0.08) 0%, transparent 70%);
+      animation: breathe 5s ease-in-out infinite 1s;
+    }
+    .doodle-circle-3 {
+      width: 200px; height: 200px;
+      top: 45%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+      animation: breathe2 6s ease-in-out infinite 0.5s;
     }
   </style>
 </head>
@@ -99,7 +197,20 @@
   </div>
 
   <section class="error-page">
-    <div class="container">
+    <div class="doodle-circle doodle-circle-1"></div>
+    <div class="doodle-circle doodle-circle-2"></div>
+    <div class="doodle-circle doodle-circle-3"></div>
+    <i class="fa-solid fa-flask doodle doodle-1"></i>
+    <i class="fa-solid fa-vial doodle doodle-2"></i>
+    <i class="fa-solid fa-atom doodle doodle-3"></i>
+    <i class="fa-solid fa-droplet doodle doodle-4"></i>
+    <i class="fa-solid fa-microscope doodle doodle-5"></i>
+    <i class="fa-solid fa-dna doodle doodle-6"></i>
+    <i class="fa-solid fa-biohazard doodle doodle-7"></i>
+    <i class="fa-solid fa-flask-vial doodle doodle-8"></i>
+    <i class="fa-solid fa-triangle-exclamation doodle doodle-9"></i>
+    <i class="fa-solid fa-gear doodle doodle-10"></i>
+    <div class="container" style="position: relative; z-index: 1;">
       <div class="error-code">404</div>
       <h1 class="error-title">Page Not Found</h1>
       <p class="error-desc">The page you are looking for doesn't exist or has been moved. Please check the URL or navigate back to our homepage.</p>
