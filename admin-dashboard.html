@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ChemManufacture</title>
+  <meta name="description" content="ChemManufacture administration panel - manage users, orders, inventory, and system settings.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dash-mobile-header">
+    <img src="logo.webp" alt="ChemManufacture" class="logo-img dash-mobile-logo-img">
+    <div class="hamburger-btn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <img src="logo.webp" alt="ChemManufacture" class="logo-img">
+      <div class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a>
+    </div>
+    <a href="login.html" class="mobile-drawer-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    <div class="mobile-drawer-contact">
+      <div class="item"><i class="fa-solid fa-phone"></i><span>+1 (555) 234-5678</span></div>
+      <div class="item"><i class="fa-solid fa-envelope"></i><span>info@chemmanufacture.com</span></div>
+    </div>
+  </div>
+
+  <!-- Dashboard Layout -->
+  <section class="dashboard-section">
+    <div class="dashboard-wrapper">
+      <!-- Sidebar -->
+      <aside class="dash-sidebar">
+        <div class="dash-sidebar-header">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img dash-mobile-logo-img">
+          <button class="dash-sidebar-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="dash-user-info">
+          <div class="dash-avatar flex-center"><i class="fa-solid fa-user-shield"></i></div>
+          <h4>Dr. Elena Torres</h4>
+          <span class="dash-role-badge admin-badge">Administrator</span>
+        </div>
+        <nav class="dash-nav">
+          <a href="#" class="dash-nav-link active" data-section="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+          <a href="#" class="dash-nav-link" data-section="users"><i class="fa-solid fa-users"></i> User Management</a>
+          <a href="#" class="dash-nav-link" data-section="orders"><i class="fa-solid fa-boxes-stacked"></i> All Orders</a>
+          <a href="#" class="dash-nav-link" data-section="inventory"><i class="fa-solid fa-warehouse"></i> Inventory</a>
+          <a href="#" class="dash-nav-link" data-section="production"><i class="fa-solid fa-flask-vial"></i> Production Lines</a>
+          <a href="#" class="dash-nav-link" data-section="analytics"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+          <a href="#" class="dash-nav-link" data-section="logistics"><i class="fa-solid fa-truck"></i> Logistics</a>
+          <a href="#" class="dash-nav-link" data-section="compliance"><i class="fa-solid fa-shield-halved"></i> Compliance</a>
+          <a href="#" class="dash-nav-link" data-section="settings"><i class="fa-solid fa-gear"></i> System Settings</a>
+          <a href="login.html" class="dash-nav-link" style="color: var(--error);"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dash-main">
+
+        <!-- ===== OVERVIEW ===== -->
+        <div class="dash-section active" data-section="overview">
+          <div class="dash-topbar">
+            <h2>Admin Control Panel</h2>
+            <span class="dash-date"><i class="fa-regular fa-calendar"></i> July 17, 2026</span>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary);"><i class="fa-solid fa-dollar-sign"></i></div>
+              <div>
+                <div class="dash-stat-number">$2.4M</div>
+                <div class="dash-stat-label">Revenue (MTD)</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-boxes-stacked"></i></div>
+              <div>
+                <div class="dash-stat-number">847</div>
+                <div class="dash-stat-label">Total Orders</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <div class="dash-stat-number">312</div>
+                <div class="dash-stat-label">Active Clients</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div>
+                <div class="dash-stat-number">4</div>
+                <div class="dash-stat-label">Low Stock Alerts</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Production Output (Monthly)</h3>
+              </div>
+              <div class="dash-chart-bars">
+                <div class="dash-bar-row"><span class="dash-bar-label">Jan</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 65%;"></div></div><span class="dash-bar-val">1,300T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">Feb</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 58%;"></div></div><span class="dash-bar-val">1,160T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">Mar</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 72%;"></div></div><span class="dash-bar-val">1,440T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">Apr</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 80%;"></div></div><span class="dash-bar-val">1,600T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">May</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 88%;"></div></div><span class="dash-bar-val">1,760T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">Jun</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 95%;"></div></div><span class="dash-bar-val">1,900T</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label">Jul</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 78%;"></div></div><span class="dash-bar-val">1,560T</span></div>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Inventory Alerts</h3>
+                <span class="status-badge status-pending">4 Critical</span>
+              </div>
+              <div class="dash-alert-list">
+                <div class="dash-alert-item alert-critical">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <div>
+                    <h4>Palladium on Carbon (10% Pd)</h4>
+                    <p>Stock: 125g &bull; Minimum: 500g &bull; Reorder urgently</p>
+                  </div>
+                </div>
+                <div class="dash-alert-item alert-critical">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <div>
+                    <h4>ZSM-5 Zeolite Catalyst</h4>
+                    <p>Stock: 2.1kg &bull; Minimum: 10kg &bull; Supplier contact initiated</p>
+                  </div>
+                </div>
+                <div class="dash-alert-item alert-warning">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <div>
+                    <h4>PEEK Engineering Pellets</h4>
+                    <p>Stock: 8kg &bull; Minimum: 15kg &bull; PO in review</p>
+                  </div>
+                </div>
+                <div class="dash-alert-item alert-warning">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <div>
+                    <h4>Anhydrous Toluene</h4>
+                    <p>Stock: 45L &bull; Minimum: 80L &bull; Delivery scheduled Jul 22</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>All Client Orders</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Client</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#ORD-2026-4481</strong></td>
+                    <td>AutoPlast Systems</td>
+                    <td>HPLC-Grade Acetone</td>
+                    <td>200 L</td>
+                    <td>$9,600</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4480</strong></td>
+                    <td>VeraSoil Agrosciences</td>
+                    <td>Microencapsulated Bio-Fertilizer</td>
+                    <td>500 kg</td>
+                    <td>$18,750</td>
+                    <td><span class="status-badge status-processing">In Production</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4479</strong></td>
+                    <td>PharmaSynthese Ltd</td>
+                    <td>Pd/C Catalyst (10%)</td>
+                    <td>25g</td>
+                    <td>$485</td>
+                    <td><span class="status-badge status-pending">Pending Approval</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Recent User Registrations</h3>
+              </div>
+              <div class="dash-user-list">
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-user"></i></div>
+                  <div>
+                    <h4>Marcus Webb</h4>
+                    <p>m.webb@terraflo.com &bull; Client &bull; Registered Jul 15</p>
+                  </div>
+                </div>
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-user"></i></div>
+                  <div>
+                    <h4>Priya Nair</h4>
+                    <p>p.nair@synthera.in &bull; Client &bull; Registered Jul 13</p>
+                  </div>
+                </div>
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-user"></i></div>
+                  <div>
+                    <h4>Klaus Richter</h4>
+                    <p>k.richter@chemlogik.de &bull; Client &bull; Registered Jul 10</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>System Status</h3>
+                <span class="status-badge status-delivered">All Operational</span>
+              </div>
+              <div class="dash-system-list">
+                <div class="dash-system-item">
+                  <span class="dash-system-name"><i class="fa-solid fa-server" style="color: #22c55e;"></i> Production Database</span>
+                  <span class="status-badge status-delivered">Online</span>
+                </div>
+                <div class="dash-system-item">
+                  <span class="dash-system-name"><i class="fa-solid fa-shield-halved" style="color: #22c55e;"></i> Security Firewall</span>
+                  <span class="status-badge status-delivered">Active</span>
+                </div>
+                <div class="dash-system-item">
+                  <span class="dash-system-name"><i class="fa-solid fa-cloud" style="color: #22c55e;"></i> Cloud Backup</span>
+                  <span class="status-badge status-delivered">Synced</span>
+                </div>
+                <div class="dash-system-item">
+                  <span class="dash-system-name"><i class="fa-solid fa-envelope" style="color: #22c55e;"></i> Mail Server</span>
+                  <span class="status-badge status-delivered">Running</span>
+                </div>
+                <div class="dash-system-item">
+                  <span class="dash-system-name"><i class="fa-solid fa-chart-line" style="color: #3b82f6;"></i> Analytics Engine</span>
+                  <span class="status-badge status-transit">Processing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== USER MANAGEMENT ===== -->
+        <div class="dash-section" data-section="users">
+          <div class="dash-topbar">
+            <h2>User Management</h2>
+            <a href="404.html" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;"><i class="fa-solid fa-user-plus"></i> Add User</a>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <div class="dash-stat-number">312</div>
+                <div class="dash-stat-label">Total Users</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-user-check"></i></div>
+              <div>
+                <div class="dash-stat-number">289</div>
+                <div class="dash-stat-label">Active</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: var(--primary);"><i class="fa-solid fa-user-clock"></i></div>
+              <div>
+                <div class="dash-stat-number">18</div>
+                <div class="dash-stat-label">Pending Approval</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;"><i class="fa-solid fa-user-xmark"></i></div>
+              <div>
+                <div class="dash-stat-number">5</div>
+                <div class="dash-stat-label">Suspended</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>All Users</h3>
+              <div style="display:flex; gap:10px;">
+                <input type="text" class="dash-search-input" placeholder="Search users...">
+                <select class="dash-filter-select">
+                  <option value="all">All Roles</option>
+                  <option value="client">Client</option>
+                  <option value="staff">Staff</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Company</th>
+                    <th>Registered</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div style="display:flex; align-items:center; gap:10px;"><div class="dash-user-avatar flex-center" style="width:32px;height:32px;"><i class="fa-solid fa-user" style="font-size:0.7rem;"></i></div><strong>Marcus Webb</strong></div></td>
+                    <td>m.webb@terraflo.com</td>
+                    <td>Client</td>
+                    <td>TerraFlo Inc</td>
+                    <td>Jul 15, 2026</td>
+                    <td><span class="status-badge status-delivered">Active</span></td>
+                    <td>
+                      <div style="display:flex; gap:6px;">
+                        <a href="404.html" class="dash-action-btn" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#" class="dash-action-btn" title="Suspend"><i class="fa-solid fa-ban"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div style="display:flex; align-items:center; gap:10px;"><div class="dash-user-avatar flex-center" style="width:32px;height:32px;"><i class="fa-solid fa-user" style="font-size:0.7rem;"></i></div><strong>Priya Nair</strong></div></td>
+                    <td>p.nair@synthera.in</td>
+                    <td>Client</td>
+                    <td>SynThera Labs</td>
+                    <td>Jul 13, 2026</td>
+                    <td><span class="status-badge status-delivered">Active</span></td>
+                    <td>
+                      <div style="display:flex; gap:6px;">
+                        <a href="404.html" class="dash-action-btn" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#" class="dash-action-btn" title="Suspend"><i class="fa-solid fa-ban"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div style="display:flex; align-items:center; gap:10px;"><div class="dash-user-avatar flex-center" style="width:32px;height:32px;"><i class="fa-solid fa-user" style="font-size:0.7rem;"></i></div><strong>Klaus Richter</strong></div></td>
+                    <td>k.richter@chemlogik.de</td>
+                    <td>Client</td>
+                    <td>ChemLogik GmbH</td>
+                    <td>Jul 10, 2026</td>
+                    <td><span class="status-badge status-processing">Pending</span></td>
+                    <td>
+                      <div style="display:flex; gap:6px;">
+                        <a href="#" class="dash-action-btn" title="Approve"><i class="fa-solid fa-check"></i></a>
+                        <a href="#" class="dash-action-btn" title="Reject"><i class="fa-solid fa-xmark"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div style="display:flex; align-items:center; gap:10px;"><div class="dash-user-avatar flex-center" style="width:32px;height:32px;"><i class="fa-solid fa-user" style="font-size:0.7rem;"></i></div><strong>James Mitchell</strong></div></td>
+                    <td>j.mitchell@terragrow.com</td>
+                    <td>Client</td>
+                    <td>TerraGrow Industries</td>
+                    <td>Jun 28, 2026</td>
+                    <td><span class="status-badge status-delivered">Active</span></td>
+                    <td>
+                      <div style="display:flex; gap:6px;">
+                        <a href="404.html" class="dash-action-btn" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#" class="dash-action-btn" title="Suspend"><i class="fa-solid fa-ban"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div style="display:flex; align-items:center; gap:10px;"><div class="dash-user-avatar flex-center" style="width:32px;height:32px;"><i class="fa-solid fa-user" style="font-size:0.7rem;"></i></div><strong>Anika Deshmukh</strong></div></td>
+                    <td>a.deshmukh@pharmindia.co</td>
+                    <td>Staff</td>
+                    <td>PharmIndia Co.</td>
+                    <td>May 20, 2026</td>
+                    <td><span class="status-badge status-delivered">Active</span></td>
+                    <td>
+                      <div style="display:flex; gap:6px;">
+                        <a href="404.html" class="dash-action-btn" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#" class="dash-action-btn" title="Suspend"><i class="fa-solid fa-ban"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ALL ORDERS ===== -->
+        <div class="dash-section" data-section="orders">
+          <div class="dash-topbar">
+            <h2>All Orders</h2>
+            <a href="#" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.85rem;"><i class="fa-solid fa-download"></i> Export CSV</a>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary);"><i class="fa-solid fa-box-open"></i></div>
+              <div>
+                <div class="dash-stat-number">847</div>
+                <div class="dash-stat-label">Total Orders</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: #d97706;"><i class="fa-solid fa-spinner"></i></div>
+              <div>
+                <div class="dash-stat-number">64</div>
+                <div class="dash-stat-label">In Production</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-truck-fast"></i></div>
+              <div>
+                <div class="dash-stat-number">38</div>
+                <div class="dash-stat-label">In Transit</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-check-double"></i></div>
+              <div>
+                <div class="dash-stat-number">741</div>
+                <div class="dash-stat-label">Delivered</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Order History</h3>
+              <div style="display:flex; gap:10px;">
+                <input type="text" class="dash-search-input" placeholder="Search orders...">
+                <select class="dash-filter-select">
+                  <option value="all">All Status</option>
+                  <option value="delivered">Delivered</option>
+                  <option value="transit">In Transit</option>
+                  <option value="production">In Production</option>
+                  <option value="pending">Pending Approval</option>
+                </select>
+              </div>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Client</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#ORD-2026-4481</strong></td>
+                    <td>AutoPlast Systems</td>
+                    <td>HPLC-Grade Acetone</td>
+                    <td>200 L</td>
+                    <td>$9,600</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                    <td>Jul 14</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4480</strong></td>
+                    <td>VeraSoil Agrosciences</td>
+                    <td>Microencapsulated Bio-Fertilizer</td>
+                    <td>500 kg</td>
+                    <td>$18,750</td>
+                    <td><span class="status-badge status-processing">In Production</span></td>
+                    <td>Jul 13</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4479</strong></td>
+                    <td>PharmaSynthese Ltd</td>
+                    <td>Pd/C Catalyst (10%)</td>
+                    <td>25g</td>
+                    <td>$485</td>
+                    <td><span class="status-badge status-pending">Pending Approval</span></td>
+                    <td>Jul 12</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4478</strong></td>
+                    <td>TerraGrow Industries</td>
+                    <td>Controlled-Release Pesticide</td>
+                    <td>1,000 kg</td>
+                    <td>$42,000</td>
+                    <td><span class="status-badge status-transit">In Transit</span></td>
+                    <td>Jul 11</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4477</strong></td>
+                    <td>HydroPure Solutions</td>
+                    <td>Municipal Flocculant Package</td>
+                    <td>5 tons</td>
+                    <td>$31,500</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                    <td>Jul 9</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-2026-4476</strong></td>
+                    <td>BatteryChem Corp</td>
+                    <td>Li-ion Electrolyte Blend</td>
+                    <td>200 L</td>
+                    <td>$14,200</td>
+                    <td><span class="status-badge status-processing">QC Review</span></td>
+                    <td>Jul 7</td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-eye"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== INVENTORY ===== -->
+        <div class="dash-section" data-section="inventory">
+          <div class="dash-topbar">
+            <h2>Inventory Management</h2>
+            <a href="404.html" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;"><i class="fa-solid fa-plus"></i> Add Stock</a>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary);"><i class="fa-solid fa-warehouse"></i></div>
+              <div>
+                <div class="dash-stat-number">156</div>
+                <div class="dash-stat-label">Total SKUs</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-check-circle"></i></div>
+              <div>
+                <div class="dash-stat-number">142</div>
+                <div class="dash-stat-label">In Stock</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: #d97706;"><i class="fa-solid fa-exclamation-triangle"></i></div>
+              <div>
+                <div class="dash-stat-number">10</div>
+                <div class="dash-stat-label">Low Stock</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;"><i class="fa-solid fa-ban"></i></div>
+              <div>
+                <div class="dash-stat-number">4</div>
+                <div class="dash-stat-label">Out of Stock</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Stock Levels</h3>
+              <div style="display:flex; gap:10px;">
+                <input type="text" class="dash-search-input" placeholder="Search inventory...">
+                <select class="dash-filter-select">
+                  <option value="all">All Categories</option>
+                  <option value="chemicals">Chemicals</option>
+                  <option value="catalysts">Catalysts</option>
+                  <option value="polymers">Polymers</option>
+                  <option value="equipment">Equipment</option>
+                </select>
+              </div>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>SKU</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>In Stock</th>
+                    <th>Min. Required</th>
+                    <th>Unit</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>CHEM-ACET-01</strong></td>
+                    <td>HPLC-Grade Acetone</td>
+                    <td>Chemicals</td>
+                    <td>1,200</td>
+                    <td>200</td>
+                    <td>L</td>
+                    <td><span class="status-badge status-delivered">Good</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CAT-ZSM5-02</strong></td>
+                    <td>ZSM-5 Zeolite Catalyst</td>
+                    <td>Catalysts</td>
+                    <td>2.1</td>
+                    <td>10</td>
+                    <td>kg</td>
+                    <td><span class="status-badge status-pending">Critical</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CAT-PDC-03</strong></td>
+                    <td>Palladium on Carbon (10%)</td>
+                    <td>Catalysts</td>
+                    <td>125</td>
+                    <td>500</td>
+                    <td>g</td>
+                    <td><span class="status-badge status-pending">Critical</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>POL-PEEK-04</strong></td>
+                    <td>PEEK Polymer Pellets</td>
+                    <td>Polymers</td>
+                    <td>8</td>
+                    <td>15</td>
+                    <td>kg</td>
+                    <td><span class="status-badge status-processing">Low</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CHEM-TOLU-05</strong></td>
+                    <td>Anhydrous Toluene</td>
+                    <td>Chemicals</td>
+                    <td>45</td>
+                    <td>80</td>
+                    <td>L</td>
+                    <td><span class="status-badge status-processing">Low</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CHEM-ETH-06</strong></td>
+                    <td>USP-Grade Ethanol</td>
+                    <td>Chemicals</td>
+                    <td>680</td>
+                    <td>100</td>
+                    <td>L</td>
+                    <td><span class="status-badge status-delivered">Good</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CHEM-H2SO4-07</strong></td>
+                    <td>Trace-Metal H2SO4</td>
+                    <td>Chemicals</td>
+                    <td>150</td>
+                    <td>50</td>
+                    <td>L</td>
+                    <td><span class="status-badge status-delivered">Good</span></td>
+                    <td><a href="404.html" class="dash-action-btn"><i class="fa-solid fa-pen"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PRODUCTION LINES ===== -->
+        <div class="dash-section" data-section="production">
+          <div class="dash-topbar">
+            <h2>Production Lines</h2>
+            <span class="dash-date"><i class="fa-solid fa-flask-vial"></i> 5 Active Lines</span>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-play-circle"></i></div>
+              <div>
+                <div class="dash-stat-number">5</div>
+                <div class="dash-stat-label">Running</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: #d97706;"><i class="fa-solid fa-wrench"></i></div>
+              <div>
+                <div class="dash-stat-number">1</div>
+                <div class="dash-stat-label">Maintenance</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary);"><i class="fa-solid fa-percent"></i></div>
+              <div>
+                <div class="dash-stat-number">94%</div>
+                <div class="dash-stat-label">Efficiency</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-temperature-half"></i></div>
+              <div>
+                <div class="dash-stat-number">1,560T</div>
+                <div class="dash-stat-label">Monthly Output</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Active Production Lines</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Line ID</th>
+                    <th>Product</th>
+                    <th>Batch Size</th>
+                    <th>Start Time</th>
+                    <th>Est. Completion</th>
+                    <th>Operator</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>LINE-A</strong></td>
+                    <td>Microencapsulated Bio-Fertilizer</td>
+                    <td>500 kg</td>
+                    <td>Jul 15, 06:00</td>
+                    <td>Jul 18, 18:00</td>
+                    <td>Carlos Mendez</td>
+                    <td><span class="status-badge status-delivered">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LINE-B</strong></td>
+                    <td>HPLC-Grade Acetone (Re-distillation)</td>
+                    <td>200 L</td>
+                    <td>Jul 16, 08:00</td>
+                    <td>Jul 17, 20:00</td>
+                    <td>Priya Sharma</td>
+                    <td><span class="status-badge status-delivered">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LINE-C</strong></td>
+                    <td>Municipal Flocculant Package</td>
+                    <td>5 tons</td>
+                    <td>Jul 14, 06:00</td>
+                    <td>Jul 19, 06:00</td>
+                    <td>Tom Bradley</td>
+                    <td><span class="status-badge status-delivered">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LINE-D</strong></td>
+                    <td>Controlled-Release Pesticide</td>
+                    <td>1,000 kg</td>
+                    <td>Jul 13, 06:00</td>
+                    <td>Jul 18, 06:00</td>
+                    <td>Li Wei</td>
+                    <td><span class="status-badge status-delivered">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LINE-E</strong></td>
+                    <td>Li-ion Electrolyte Blend</td>
+                    <td>200 L</td>
+                    <td>Jul 16, 10:00</td>
+                    <td>Jul 17, 22:00</td>
+                    <td>Anika Deshmukh</td>
+                    <td><span class="status-badge status-delivered">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LINE-F</strong></td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td>&mdash;</td>
+                    <td><span class="status-badge status-pending">Maintenance</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ANALYTICS ===== -->
+        <div class="dash-section" data-section="analytics">
+          <div class="dash-topbar">
+            <h2>Analytics</h2>
+            <select class="dash-filter-select" style="min-width: 160px;">
+              <option>Last 30 Days</option>
+              <option>Last 90 Days</option>
+              <option>This Year</option>
+              <option>All Time</option>
+            </select>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary);"><i class="fa-solid fa-dollar-sign"></i></div>
+              <div>
+                <div class="dash-stat-number">$2.4M</div>
+                <div class="dash-stat-label">Revenue (MTD)</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <div>
+                <div class="dash-stat-number">+18%</div>
+                <div class="dash-stat-label">Revenue Growth</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-cart-shopping"></i></div>
+              <div>
+                <div class="dash-stat-number">$2,834</div>
+                <div class="dash-stat-label">Avg. Order Value</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(168,85,247,0.1); color: #a855f7;"><i class="fa-solid fa-user-plus"></i></div>
+              <div>
+                <div class="dash-stat-number">23</div>
+                <div class="dash-stat-label">New Clients (MTD)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Revenue by Category</h3>
+              </div>
+              <div class="dash-chart-bars">
+                <div class="dash-bar-row"><span class="dash-bar-label" style="width:100px;">Chemicals</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 85%;"></div></div><span class="dash-bar-val">$1.02M</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label" style="width:100px;">Catalysts</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 52%;"></div></div><span class="dash-bar-val">$624K</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label" style="width:100px;">Polymers</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 38%;"></div></div><span class="dash-bar-val">$456K</span></div>
+                <div class="dash-bar-row"><span class="dash-bar-label" style="width:100px;">Agrochem</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width: 25%; background: #a855f7;"></div></div><span class="dash-bar-val">$300K</span></div>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Top Clients by Revenue</h3>
+              </div>
+              <div class="dash-user-list">
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-building" style="font-size:0.8rem;"></i></div>
+                  <div style="flex:1;">
+                    <h4>AutoPlast Systems</h4>
+                    <p>$312,400 &bull; 28 orders</p>
+                  </div>
+                  <span class="status-badge status-delivered">Top 1%</span>
+                </div>
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-building" style="font-size:0.8rem;"></i></div>
+                  <div style="flex:1;">
+                    <h4>TerraGrow Industries</h4>
+                    <p>$287,900 &bull; 34 orders</p>
+                  </div>
+                  <span class="status-badge status-delivered">Top 5%</span>
+                </div>
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-building" style="font-size:0.8rem;"></i></div>
+                  <div style="flex:1;">
+                    <h4>HydroPure Solutions</h4>
+                    <p>$198,500 &bull; 19 orders</p>
+                  </div>
+                  <span class="status-badge status-transit">Top 10%</span>
+                </div>
+                <div class="dash-user-item">
+                  <div class="dash-user-avatar flex-center"><i class="fa-solid fa-building" style="font-size:0.8rem;"></i></div>
+                  <div style="flex:1;">
+                    <h4>BatteryChem Corp</h4>
+                    <p>$176,200 &bull; 15 orders</p>
+                  </div>
+                  <span class="status-badge status-transit">Top 10%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== LOGISTICS ===== -->
+        <div class="dash-section" data-section="logistics">
+          <div class="dash-topbar">
+            <h2>Logistics</h2>
+            <span class="dash-date"><i class="fa-solid fa-truck"></i> 38 Active Shipments</span>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;"><i class="fa-solid fa-truck-fast"></i></div>
+              <div>
+                <div class="dash-stat-number">38</div>
+                <div class="dash-stat-label">In Transit</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-truck-ramp-box"></i></div>
+              <div>
+                <div class="dash-stat-number">12</div>
+                <div class="dash-stat-label">Out for Delivery</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: #d97706;"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="dash-stat-number">3</div>
+                <div class="dash-stat-label">Delayed</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-check-double"></i></div>
+              <div>
+                <div class="dash-stat-number">97%</div>
+                <div class="dash-stat-label">On-Time Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Active Shipments</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Tracking</th>
+                    <th>Order</th>
+                    <th>Client</th>
+                    <th>Product</th>
+                    <th>Carrier</th>
+                    <th>Shipped</th>
+                    <th>ETA</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>FX-882716453</strong></td>
+                    <td>#ORD-2026-4475</td>
+                    <td>James Mitchell</td>
+                    <td>ZSM-5 Zeolite Catalyst</td>
+                    <td>FedEx Freight</td>
+                    <td>Jul 12</td>
+                    <td>Jul 19</td>
+                    <td><span class="status-badge status-transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>MSK-4492018</strong></td>
+                    <td>#ORD-2026-4452</td>
+                    <td>James Mitchell</td>
+                    <td>Anhydrous Toluene 50L</td>
+                    <td>Maersk Line</td>
+                    <td>Jul 5</td>
+                    <td>Jul 22</td>
+                    <td><span class="status-badge status-transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>DHL-5501993</strong></td>
+                    <td>#ORD-2026-4468</td>
+                    <td>James Mitchell</td>
+                    <td>PEEK Polymer Pellets</td>
+                    <td>DHL Supply Chain</td>
+                    <td>Jul 16</td>
+                    <td>Jul 20</td>
+                    <td><span class="status-badge status-delivered">Out for Delivery</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>UPS-7712834</strong></td>
+                    <td>#ORD-2026-4478</td>
+                    <td>TerraGrow Industries</td>
+                    <td>Controlled-Release Pesticide</td>
+                    <td>UPS Freight</td>
+                    <td>Jul 11</td>
+                    <td>Jul 18</td>
+                    <td><span class="status-badge status-processing">Delayed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== COMPLIANCE ===== -->
+        <div class="dash-section" data-section="compliance">
+          <div class="dash-topbar">
+            <h2>Compliance</h2>
+            <span class="dash-date"><i class="fa-solid fa-shield-halved"></i> All Certifications Current</span>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-certificate"></i></div>
+              <div>
+                <div class="dash-stat-number">8</div>
+                <div class="dash-stat-label">Active Certifications</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-clipboard-check"></i></div>
+              <div>
+                <div class="dash-stat-number">12</div>
+                <div class="dash-stat-label">Audits Passed</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(var(--primary-rgb),0.1); color: #d97706;"><i class="fa-solid fa-calendar-check"></i></div>
+              <div>
+                <div class="dash-stat-number">2</div>
+                <div class="dash-stat-label">Renewals Due (30d)</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="background: rgba(34,197,94,0.1); color: #22c55e;"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <div class="dash-stat-number">0</div>
+                <div class="dash-stat-label">Open Violations</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Certifications & Permits</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Certification</th>
+                    <th>Issuing Body</th>
+                    <th>Issue Date</th>
+                    <th>Expiry Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>ISO 9001:2015</strong></td>
+                    <td>Bureau Veritas</td>
+                    <td>Mar 15, 2025</td>
+                    <td>Mar 14, 2028</td>
+                    <td><span class="status-badge status-delivered">Current</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>ISO 14001:2015</strong></td>
+                    <td>Bureau Veritas</td>
+                    <td>Mar 15, 2025</td>
+                    <td>Mar 14, 2028</td>
+                    <td><span class="status-badge status-delivered">Current</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>OSHA VPP Star</strong></td>
+                    <td>OSHA</td>
+                    <td>Jun 1, 2024</td>
+                    <td>May 31, 2027</td>
+                    <td><span class="status-badge status-delivered">Current</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>EPA RCRA Permit</strong></td>
+                    <td>U.S. EPA</td>
+                    <td>Sep 10, 2024</td>
+                    <td>Sep 9, 2027</td>
+                    <td><span class="status-badge status-delivered">Current</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>REACH Registration</strong></td>
+                    <td>ECHA</td>
+                    <td>Jan 20, 2025</td>
+                    <td>Jan 19, 2030</td>
+                    <td><span class="status-badge status-delivered">Current</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hazmat Transport License</strong></td>
+                    <td>DOT</td>
+                    <td>Aug 5, 2024</td>
+                    <td>Aug 4, 2026</td>
+                    <td><span class="status-badge status-pending">Expiring Soon</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Recent Audit Reports</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Audit</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Auditor</th>
+                    <th>Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Q2 Internal Safety Review</strong></td>
+                    <td>Internal</td>
+                    <td>Jun 28, 2026</td>
+                    <td>Safety Team</td>
+                    <td><span class="status-badge status-delivered">Passed</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>EPA Compliance Spot Check</strong></td>
+                    <td>External</td>
+                    <td>Jun 10, 2026</td>
+                    <td>U.S. EPA Region 5</td>
+                    <td><span class="status-badge status-delivered">Passed</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>ISO Surveillance Audit</strong></td>
+                    <td>External</td>
+                    <td>Apr 22, 2026</td>
+                    <td>Bureau Veritas</td>
+                    <td><span class="status-badge status-delivered">Passed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SYSTEM SETTINGS ===== -->
+        <div class="dash-section" data-section="settings">
+          <div class="dash-topbar">
+            <h2>System Settings</h2>
+          </div>
+
+          <div class="dash-grid-2">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>General Settings</h3>
+              </div>
+              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+                <div class="form-group">
+                  <label>Company Name</label>
+                  <input type="text" class="form-control" value="ChemManufacture Inc.">
+                </div>
+                <div class="form-group">
+                  <label>Support Email</label>
+                  <input type="email" class="form-control" value="support@chemmanufacture.com">
+                </div>
+                <div class="form-group">
+                  <label>Default Currency</label>
+                  <select class="form-control">
+                    <option selected>USD - US Dollar</option>
+                    <option>EUR - Euro</option>
+                    <option>GBP - British Pound</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Timezone</label>
+                  <select class="form-control">
+                    <option selected>Central Time (CT)</option>
+                    <option>Eastern Time (ET)</option>
+                    <option>Pacific Time (PT)</option>
+                    <option>UTC</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Save Settings</button>
+              </form>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Security & Access</h3>
+              </div>
+              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+                <div class="form-group">
+                  <label>Admin Password</label>
+                  <input type="password" class="form-control" placeholder="Enter current password">
+                </div>
+                <div class="form-group">
+                  <label>New Password</label>
+                  <input type="password" class="form-control" placeholder="Enter new password">
+                </div>
+                <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Update Password</button>
+              </form>
+
+              <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                <h3 style="font-size: 1rem; margin-bottom: 12px;">System Notifications</h3>
+                <label class="dash-toggle-row">
+                  <input type="checkbox" checked> <span>Email alerts for low inventory</span>
+                </label>
+                <label class="dash-toggle-row">
+                  <input type="checkbox" checked> <span>Order status change notifications</span>
+                </label>
+                <label class="dash-toggle-row">
+                  <input type="checkbox" checked> <span>New user registration alerts</span>
+                </label>
+                <label class="dash-toggle-row">
+                  <input type="checkbox"> <span>Daily production summary reports</span>
+                </label>
+                <label class="dash-toggle-row">
+                  <input type="checkbox" checked> <span>Compliance renewal reminders</span>
+                </label>
+                <label class="dash-toggle-row">
+                  <input type="checkbox"> <span>System error alerts (SMS)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

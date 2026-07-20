@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - ChemManufacture</title>
+  <meta name="description" content="Get in touch with our sales representatives or scientific experts at ChemManufacture. Send inquiries and request chemical batch specifications.">
+  <meta name="keywords" content="contact chemical company, sales, chemistry experts, industrial address, inquiry form">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <!-- Main Navigation Bar -->
+    <div class="main-nav-wrapper">
+      <div class="container main-nav">
+        <a href="index.html" class="logo" id="mainLogo">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img header-logo-img">
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.8rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div>
+
+        <div class="hamburger-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo">
+        <img src="logo.webp" alt="ChemManufacture" class="logo-img">
+      </div>
+      <div class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="login.html" class="mobile-drawer-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    <div class="mobile-drawer-contact">
+      <div class="item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+1 (555) 234-5678</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@chemmanufacture.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PAGE HERO BANNER
+       ========================================== -->
+  <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=1920');">
+    <div class="container page-banner-content">
+      <h1>Contact Us</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT GRID SECTION
+       ========================================== -->
+  <section class="section-padding" style="background-color: #ffffff;">
+    <div class="container contact-grid">
+      <!-- Contact Cards Column -->
+      <div class="contact-info-cards">
+        <!-- Address Card -->
+        <div class="contact-info-card delay-1" data-anim="fade-left">
+          <div class="contact-info-icon flex-center"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-info-text">
+            <h3>Our Head Office</h3>
+            <p>100 Industrial Parkway, Sector 4<br>Houston, TX 77001, United States</p>
+          </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="contact-info-card delay-2" data-anim="fade-left">
+          <div class="contact-info-icon flex-center"><i class="fa-solid fa-phone-volume"></i></div>
+          <div class="contact-info-text">
+            <h3>Direct Contact</h3>
+            <p>Main Hotline: +1 (555) 234-5678<br>Sales Dept: +1 (555) 234-9900</p>
+          </div>
+        </div>
+
+        <!-- Email Card -->
+        <div class="contact-info-card delay-3" data-anim="fade-left">
+          <div class="contact-info-icon flex-center"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <div class="contact-info-text">
+            <h3>Electronic Mail</h3>
+            <p>General Inquiries: info@chemmanufacture.com<br>Chemical Orders: sales@chemmanufacture.com</p>
+          </div>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="contact-info-card delay-4" data-anim="fade-left">
+          <div class="contact-info-icon flex-center"><i class="fa-solid fa-clock"></i></div>
+          <div class="contact-info-text">
+            <h3>Plant Operations Hours</h3>
+            <p>Monday - Saturday: 8:00 AM - 6:00 PM<br>Sunday: Closed (Emergency Dispatch Only)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Column -->
+      <div class="contact-form-wrap" data-anim="fade-right">
+        <h3>Submit Batch Specifications</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <!-- Name Input -->
+            <div class="form-group">
+              <input type="text" id="contactName" placeholder="Your Name" class="form-control" required>
+              <div class="form-error-msg">This field is required.</div>
+            </div>
+            
+            <!-- Email Input -->
+            <div class="form-group">
+              <input type="email" id="contactEmail" placeholder="Your Email Address" class="form-control" required>
+              <div class="form-error-msg">Please enter a valid email.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <!-- Phone Input -->
+            <div class="form-group">
+              <input type="text" id="contactPhone" placeholder="Your Telephone (Optional)" class="form-control">
+              <div class="form-error-msg">Please enter a valid telephone.</div>
+            </div>
+
+            <!-- Subject Input -->
+            <div class="form-group">
+              <input type="text" id="contactSubject" placeholder="Subject / Compound Name" class="form-control" required>
+              <div class="form-error-msg">This field is required.</div>
+            </div>
+          </div>
+
+          <!-- Message Textarea -->
+          <div class="form-group">
+            <textarea id="contactMessage" placeholder="Detailed Inquiry (e.g., compound molecular specs, delivery quantities, packaging requirements)..." class="form-control" required></textarea>
+            <div class="form-error-msg">This field is required.</div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-secondary" style="width: 100%;">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAP PLACEHOLDER
+       ========================================== -->
+  <section class="map-placeholder-section">
+    <div class="map-placeholder-container">
+      <div class="map-graphics"></div>
+      <div class="map-mock-routes"></div>
+      <div class="map-overlay-card">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3>Central Houston Plant</h3>
+        <p style="line-height: 1.7; letter-spacing: 0.2px;">Adjacent to the Port of Houston, facilitating secure tank loading and maritime export networks.</p>
+        <a href="404.html" target="_blank" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.75rem;">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <!-- Widget 1: Bio -->
+      <div class="footer-widget">
+        <a href="index.html" class="logo" style="margin-bottom: 25px; display: inline-flex;">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img footer-logo-img">
+        </a>
+        <p class="footer-about-text">
+          Leading chemical synthesis and distribution. We provide petrochemical, polymer, agricultural, and research formulations globally with a priority on safety and sustainability.
+        </p>
+        <div class="top-bar-socials" style="margin-top: 15px; font-size: 1.1rem;">
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Widget 2: Quick Links -->
+      <div class="footer-widget">
+        <h3>Useful Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="projects.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Widget 3: Services -->
+      <div class="footer-widget">
+        <h3>Our Branches</h3>
+        <ul class="footer-links-list">
+          <li><a href="404.html">Petrochemicals</a></li>
+          <li><a href="404.html">Polymers & Resins</a></li>
+          <li><a href="404.html">Agrochemicals</a></li>
+          <li><a href="404.html">Fine Chemicals</a></li>
+          <li><a href="404.html">Zeolite Catalysis</a></li>
+        </ul>
+      </div>
+
+      <!-- Widget 4: Newsletter -->
+      <div class="footer-widget">
+        <h3>Newsletter Signup</h3>
+        <p class="footer-newsletter-text">Subscribe to receive technical bulletins, plant updates, and industry insights.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+          <input type="email" placeholder="Your Email Address" class="newsletter-input" required aria-label="Newsletter Email">
+          <button type="submit" class="newsletter-submit-btn flex-center" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ChemManufacture. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Use</a>
+        <a href="404.html">Safety Protocols</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

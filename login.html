@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ChemManufacture</title>
+  <meta name="description" content="Sign in to your ChemManufacture account to manage orders, track shipments, and access your dashboard.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="main-nav-wrapper">
+      <div class="container main-nav">
+        <a href="index.html" class="logo" id="mainLogo">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img header-logo-img">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.8rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div>
+        <div class="hamburger-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo">
+        <img src="logo.webp" alt="ChemManufacture" class="logo-img">
+      </div>
+      <div class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="login.html" class="mobile-drawer-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    <div class="mobile-drawer-contact">
+      <div class="item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+1 (555) 234-5678</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@chemmanufacture.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="login-container">
+      <div class="login-left">
+        <div class="login-brand">
+          <div class="login-logo-icon flex-center"><i class="fa-solid fa-flask-vial"></i></div>
+          <h2>Chem<span>Manufacture</span></h2>
+        </div>
+        <h1>Welcome Back</h1>
+        <p>Sign in to access your dashboard, manage chemical orders, track shipments, and view real-time production analytics.</p>
+        <div class="login-features">
+          <div class="login-feature">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>Track & manage your chemical orders</span>
+          </div>
+          <div class="login-feature">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Real-time batch production analytics</span>
+          </div>
+          <div class="login-feature">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Download invoices & safety data sheets</span>
+          </div>
+          <div class="login-feature">
+            <i class="fa-solid fa-headset"></i>
+            <span>Priority technical support access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-right">
+        <div class="login-form-card">
+          <div class="login-tabs">
+            <button class="login-tab active" data-role="user"><i class="fa-solid fa-user"></i> User Login</button>
+            <button class="login-tab" data-role="admin"><i class="fa-solid fa-user-shield"></i> Admin Login</button>
+          </div>
+
+          <!-- User Login Form -->
+          <form class="login-form" id="userLoginForm" onsubmit="event.preventDefault(); window.location.href='user-dashboard.html';">
+            <h3>Client Portal Access</h3>
+            <p class="login-form-desc">Sign in to manage your orders, view shipments, and access account details.</p>
+            
+            <div class="form-group">
+              <label for="userEmail">Email Address</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="userEmail" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="userPassword">Password</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="userPassword" placeholder="Enter your password" required>
+                <button type="button" class="toggle-pass" aria-label="Toggle password"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+            <div class="form-row-flex">
+              <label class="checkbox-wrap">
+                <input type="checkbox"> <span>Remember me</span>
+              </label>
+              <a href="404.html" class="forgot-link">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary login-submit-btn">Sign In to Dashboard</button>
+            <p class="login-switch-text">Don't have an account? <a href="404.html">Contact Sales</a></p>
+          </form>
+
+          <!-- Admin Login Form -->
+          <form class="login-form hidden" id="adminLoginForm" onsubmit="event.preventDefault(); window.location.href='admin-dashboard.html';">
+            <h3>Administration Portal</h3>
+            <p class="login-form-desc">Restricted access for authorized administrators only.</p>
+            
+            <div class="form-group">
+              <label for="adminEmail">Admin Email</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="adminEmail" placeholder="admin@chemmanufacture.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adminPassword">Password</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+                <button type="button" class="toggle-pass" aria-label="Toggle password"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adminToken">Security Token</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-key"></i>
+                <input type="text" id="adminToken" placeholder="Enter 2FA token" required>
+              </div>
+            </div>
+            <div class="form-row-flex">
+              <label class="checkbox-wrap">
+                <input type="checkbox"> <span>Remember this device</span>
+              </label>
+              <a href="404.html" class="forgot-link">Reset token</a>
+            </div>
+            <button type="submit" class="btn btn-primary login-submit-btn">Access Admin Panel</button>
+            <p class="login-switch-text">Need admin access? <a href="contact.html">Request Authorization</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-widget">
+        <a href="index.html" class="logo" style="margin-bottom: 25px; display: inline-flex;">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img footer-logo-img">
+        </a>
+        <p class="footer-about-text">Leading chemical synthesis and distribution. We provide petrochemical, polymer, agricultural, and research formulations globally with a priority on safety and sustainability.</p>
+      </div>
+      <div class="footer-widget">
+        <h3>Useful Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="projects.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h3>Our Branches</h3>
+        <ul class="footer-links-list">
+          <li><a href="services.html">Petrochemicals</a></li>
+          <li><a href="services.html">Polymers & Resins</a></li>
+          <li><a href="services.html">Agrochemicals</a></li>
+          <li><a href="services.html">Fine Chemicals</a></li>
+          <li><a href="services.html">Zeolite Catalysis</a></li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h3>Newsletter Signup</h3>
+        <p class="footer-newsletter-text">Subscribe to receive technical bulletins, plant updates, and industry insights.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+          <input type="email" placeholder="Your Email Address" class="newsletter-input" required aria-label="Newsletter Email">
+          <button type="submit" class="newsletter-submit-btn flex-center" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ChemManufacture. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Use</a>
+        <a href="404.html">Safety Protocols</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Login tab switching
+    document.querySelectorAll('.login-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.login-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const role = tab.dataset.role;
+        document.getElementById('userLoginForm').classList.toggle('hidden', role !== 'user');
+        document.getElementById('adminLoginForm').classList.toggle('hidden', role !== 'admin');
+      });
+    });
+    // Toggle password visibility
+    document.querySelectorAll('.toggle-pass').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.parentElement.querySelector('input');
+        const icon = btn.querySelector('i');
+        if (input.type === 'password') { input.type = 'text'; icon.classList.replace('fa-eye-slash', 'fa-eye'); }
+        else { input.type = 'password'; icon.classList.replace('fa-eye', 'fa-eye-slash'); }
+      });
+    });
+  </script>
+</body>
+</html>

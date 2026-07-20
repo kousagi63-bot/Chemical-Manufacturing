@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - ChemManufacture</title>
+  <meta name="description" content="Read case studies on our polymer synthesis, refinery updates, eco-catalysts, and wastewater purification projects.">
+  <meta name="keywords" content="chemical engineering projects, case studies, refinery expansion, catalyst r&d, purification">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <!-- Main Navigation Bar -->
+    <div class="main-nav-wrapper">
+      <div class="container main-nav">
+        <a href="index.html" class="logo" id="mainLogo">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img header-logo-img">
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.8rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div>
+
+        <div class="hamburger-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo">
+        <img src="logo.webp" alt="ChemManufacture" class="logo-img">
+      </div>
+      <div class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="login.html" class="mobile-drawer-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    <div class="mobile-drawer-contact">
+      <div class="item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+1 (555) 234-5678</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@chemmanufacture.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PAGE HERO BANNER
+       ========================================== -->
+  <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=1920');">
+    <div class="container page-banner-content">
+      <h1>Case Studies & Projects</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FILTERABLE PROJECTS GRID
+       ========================================== -->
+  <section class="section-padding" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="section-title-wrap text-center" data-anim="fade-up">
+        <span class="section-subtitle">Our Portfolios</span>
+        <h2 class="section-title">Pioneering Solutions in Commercial Synthesis</h2>
+      </div>
+
+      <!-- Filter Navigation -->
+      <div class="portfolio-filter-nav">
+        <a href="404.html" class="filter-btn active">All Projects</a>
+        <a href="404.html" class="filter-btn">Petrochemical</a>
+        <a href="404.html" class="filter-btn">Specialty Fine</a>
+        <a href="404.html" class="filter-btn">Agrochemical</a>
+        <a href="404.html" class="filter-btn">Research & Dev</a>
+        <a href="404.html" class="filter-btn">Environmental</a>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="portfolio-grid">
+        <!-- Item 1 -->
+        <div class="portfolio-item" data-id="project-1" data-category="Petrochemical" data-anim="circle" data-delay="delay-1">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=500" alt="Petrochemical Refinery">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Petrochemical</div>
+              <h3 class="portfolio-item-title">Petrochemical Refinery Expansion</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="portfolio-item" data-id="project-2" data-category="Speciality" data-anim="circle" data-delay="delay-2">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d66e8?auto=format&fit=crop&q=80&w=500" alt="Polymer Lab">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Speciality</div>
+              <h3 class="portfolio-item-title">High-Performance Polymer Development</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="portfolio-item" data-id="project-3" data-category="Agrochem" data-anim="circle" data-delay="delay-3">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=500" alt="Agrochemistry Field">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Agrochem</div>
+              <h3 class="portfolio-item-title">Bio-Agrochemical Formulation</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="portfolio-item" data-id="project-4" data-category="R&D" data-anim="circle" data-delay="delay-4">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=500" alt="Research Catalyst">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">R&D</div>
+              <h3 class="portfolio-item-title">Eco-Friendly Catalyst R&D</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="portfolio-item" data-id="project-5" data-category="Speciality" data-anim="circle" data-delay="delay-5">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=500" alt="Chemical Reactor">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Speciality</div>
+              <h3 class="portfolio-item-title">Speciality Chemical Batch Plant</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="portfolio-item" data-id="project-6" data-category="Eco-Friendly" data-anim="circle" data-delay="delay-6">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?auto=format&fit=crop&q=80&w=500" alt="Water Treatment">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Eco-Friendly</div>
+              <h3 class="portfolio-item-title">Industrial Wastewater Purification</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="portfolio-item" data-id="project-7" data-category="Petrochemical" data-anim="circle" data-delay="delay-1">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=500" alt="Ethylene Plant">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Petrochemical</div>
+              <h3 class="portfolio-item-title">Ethylene Glycol Plant Upgrade</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="portfolio-item" data-id="project-8" data-category="Speciality" data-anim="circle" data-delay="delay-2">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306dca665?auto=format&fit=crop&q=80&w=500" alt="Pharma Intermediates">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Speciality</div>
+              <h3 class="portfolio-item-title">Pharmaceutical Intermediates Scale-Up</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="portfolio-item" data-id="project-9" data-category="R&D" data-anim="circle" data-delay="delay-3">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=500" alt="Monomer Synthesis">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">R&D</div>
+              <h3 class="portfolio-item-title">Custom Monomer Synthesis R&D</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="portfolio-item" data-id="project-10" data-category="Agrochem" data-anim="circle" data-delay="delay-4">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=500" alt="Crop Protection">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Agrochem</div>
+              <h3 class="portfolio-item-title">Controlled-Release Pesticide Coating</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="portfolio-item" data-id="project-11" data-category="Eco-Friendly" data-anim="circle" data-delay="delay-5">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513828742140-ccaa34f3bfc1?auto=format&fit=crop&q=80&w=500" alt="Safety Systems">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Eco-Friendly</div>
+              <h3 class="portfolio-item-title">Automated Safety Relief Upgrade</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="portfolio-item" data-id="project-12" data-category="Speciality" data-anim="circle" data-delay="delay-6">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d66e8?auto=format&fit=crop&q=80&w=500" alt="Polymer Development">
+            <div class="portfolio-overlay">
+              <div class="portfolio-category">Speciality</div>
+              <h3 class="portfolio-item-title">High-Performance Polymer Blend</h3>
+              <a href="404.html" class="portfolio-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PROJECT DELIVERY PROCESS
+       ========================================== -->
+  <section class="section-padding" style="background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="section-subtitle">Our Methodology</span>
+        <h2 class="section-title">Project Execution Lifecycle</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">From initial feasibility assessment to commercial-scale production, our engineering teams follow a rigorous five-phase delivery framework.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 50px;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800" alt="Chemical Engineering Lab" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        </div>
+        <div>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">Every project begins with a thorough assessment of technical requirements, regulatory constraints, and raw material availability. Our multidisciplinary teams collaborate closely with client stakeholders to define clear milestones and quality benchmarks.</p>
+          <p style="color: var(--text-muted);">With over 320 successful project deliveries across 28 countries, our methodology has been refined through decades of hands-on chemical engineering experience across petrochemical, pharmaceutical, agrochemical, and specialty chemical sectors.</p>
+        </div>
+      </div>
+
+      <div class="process-steps-grid" style="margin-top: 50px;">
+        <div class="process-step-card">
+          <div class="process-step-number">01</div>
+          <div class="process-step-icon flex-center"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3>Feasibility & Scoping</h3>
+          <p>Detailed technical assessment of raw material inputs, reaction pathways, and regulatory requirements before project commitment.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-number">02</div>
+          <div class="process-step-icon flex-center"><i class="fa-solid fa-flask"></i></div>
+          <h3>Lab-Scale Synthesis</h3>
+          <p>Bench-scale validation of chemical reactions, yield optimization, and purity profiling in our certified R&D laboratories.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-number">03</div>
+          <div class="process-step-icon flex-center"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+          <h3>Pilot Plant Trials</h3>
+          <p>Intermediate-scale production runs to validate process parameters, equipment configurations, and quality control protocols.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-number">04</div>
+          <div class="process-step-icon flex-center"><i class="fa-solid fa-industry"></i></div>
+          <h3>Commercial Scale-Up</h3>
+          <p>Full-scale batch or continuous processing with automated monitoring, real-time analytics, and compliance documentation.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-number">05</div>
+          <div class="process-step-icon flex-center"><i class="fa-solid fa-check-double"></i></div>
+          <h3>Validation & Handover</h3>
+          <p>Final quality assurance audits, regulatory filings, and complete technical documentation delivered to the client.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CALL TO ACTION BANNER
+       ========================================== -->
+  <section class="cta-banner-section">
+    <div class="container cta-banner-content" data-anim="bounce">
+      <div class="cta-text">
+        <h2>Require Customized Chemical Formulations?</h2>
+        <p>Connect with our senior chemical engineering team to discuss synthesis steps and laboratory analysis.</p>
+      </div>
+      <div>
+        <a href="404.html" class="btn btn-secondary">Request Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <!-- Widget 1: Bio -->
+      <div class="footer-widget">
+        <a href="index.html" class="logo" style="margin-bottom: 25px; display: inline-flex;">
+          <img src="logo.webp" alt="ChemManufacture" class="logo-img footer-logo-img">
+        </a>
+        <p class="footer-about-text">
+          Leading chemical synthesis and distribution. We provide petrochemical, polymer, agricultural, and research formulations globally with a priority on safety and sustainability.
+        </p>
+        <div class="top-bar-socials" style="margin-top: 15px; font-size: 1.1rem;">
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Widget 2: Quick Links -->
+      <div class="footer-widget">
+        <h3>Useful Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="projects.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Widget 3: Services -->
+      <div class="footer-widget">
+        <h3>Our Branches</h3>
+        <ul class="footer-links-list">
+          <li><a href="404.html">Petrochemicals</a></li>
+          <li><a href="404.html">Polymers & Resins</a></li>
+          <li><a href="404.html">Agrochemicals</a></li>
+          <li><a href="404.html">Fine Chemicals</a></li>
+          <li><a href="404.html">Zeolite Catalysis</a></li>
+        </ul>
+      </div>
+
+      <!-- Widget 4: Newsletter -->
+      <div class="footer-widget">
+        <h3>Newsletter Signup</h3>
+        <p class="footer-newsletter-text">Subscribe to receive technical bulletins, plant updates, and industry insights.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+          <input type="email" placeholder="Your Email Address" class="newsletter-input" required aria-label="Newsletter Email">
+          <button type="submit" class="newsletter-submit-btn flex-center" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ChemManufacture. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Use</a>
+        <a href="404.html">Safety Protocols</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL PORTFOLIO POPUP
+       ========================================== -->
+  <div class="modal">
+    <button class="modal-close-btn flex-center" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-container">
+      <div class="modal-img-wrap">
+        <img src="" alt="Project Image">
+      </div>
+      <div class="modal-content">
+        <div class="modal-header-meta">
+          <span class="modal-category-meta">Category</span>
+        </div>
+        <h2 class="modal-title">Project Title</h2>
+        
+        <div class="modal-detail-grid">
+          <div class="modal-desc">
+            <h3>Project Summary</h3>
+            <p class="modal-desc-main">Detailed summary goes here...</p>
+            
+            <h3>The Challenge</h3>
+            <p class="modal-desc-challenge">Challenge description goes here...</p>
+            
+            <h3>Our Chemical Solution</h3>
+            <p class="modal-desc-solution">Chemical engineering solution details...</p>
+          </div>
+          
+          <div class="modal-specs">
+            <h4>Project Specs</h4>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Client</span>
+              <span class="modal-spec-val spec-client">Client Name</span>
+            </div>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Location</span>
+              <span class="modal-spec-val spec-location">Houston, TX</span>
+            </div>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Duration</span>
+              <span class="modal-spec-val spec-duration">12 Months</span>
+            </div>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Project Value</span>
+              <span class="modal-spec-val spec-value">$5,000,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
