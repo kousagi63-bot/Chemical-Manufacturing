@@ -582,6 +582,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
+  // DASHBOARD FORM VALIDATION
+  // ==========================================
+  function validateDashForm(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = form.querySelector('.dash-form-msg');
+      const fields = form.querySelectorAll('input, select');
+      let allFilled = true;
+      fields.forEach(function(field) {
+        if (!field.value.trim()) allFilled = false;
+      });
+      if (!allFilled) {
+        if (msg) {
+          msg.textContent = 'Please fill in all fields before submitting.';
+          msg.style.display = 'block';
+        }
+        return;
+      }
+      if (msg) msg.style.display = 'none';
+      window.location.href = '404.html';
+    });
+  }
+  validateDashForm('personalInfoForm');
+  validateDashForm('updatePasswordForm');
+  validateDashForm('adminSettingsForm');
+  validateDashForm('adminPasswordForm');
+
+  // ==========================================
   // VIDEO BACKGROUND AUTOPLAY FALLBACK
   // ==========================================
   document.querySelectorAll('.hero-bg-video, .banner-bg-video').forEach(v => {

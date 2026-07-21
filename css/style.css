@@ -279,6 +279,14 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
+.nav-cta .btn-outline {
+  color: var(--secondary);
+}
+
+.nav-cta .btn-outline:hover {
+  color: #ffffff;
+}
+
 .read-more {
   display: inline-flex;
   align-items: center;
@@ -793,7 +801,8 @@ header {
 
 .hero-desc {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 35px;
   transform: translateY(40px);
   opacity: 0;
@@ -1267,17 +1276,20 @@ header {
 }
 
 .testimonials-slider-wrap {
-  max-width: 800px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
 }
 
 .testimonials-viewport {
   overflow: hidden;
   position: relative;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
 }
 
 .testimonials-track {
@@ -1340,9 +1352,8 @@ header {
 }
 
 .testimonial-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  flex-shrink: 0;
   width: 45px;
   height: 45px;
   display: flex;
@@ -1365,8 +1376,8 @@ header {
   box-shadow: var(--shadow-sm);
 }
 
-.testimonial-arrow-left { left: 10px; }
-.testimonial-arrow-right { right: 10px; }
+.testimonial-arrow-left { margin-right: 20px; order: -1; }
+.testimonial-arrow-right { margin-left: 20px; order: 1; }
 
 /* Testimonials Dark mode override */
 .bg-dark .testimonial-text {
@@ -1394,8 +1405,9 @@ header {
     height: 36px;
     font-size: 0.85rem;
   }
-  .testimonial-arrow-left { left: 5px; }
-  .testimonial-arrow-right { right: 5px; }
+  .testimonial-arrow-left { margin-right: 12px; }
+  .testimonial-arrow-right { margin-left: 12px; }
+  .testimonial-slide { padding: 0 20px; }
 }
 
 /* ==========================================
@@ -2244,12 +2256,17 @@ textarea.form-control {
   right: 0;
   height: 100%;
   width: 55px;
+  padding: 0;
   background-color: var(--primary);
   color: var(--secondary);
   cursor: pointer;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-size: 1.1rem;
   transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .newsletter-submit-btn:hover {
@@ -4355,7 +4372,6 @@ breadcrumbs a:hover ~ i {
 
 /* Newsletter Submit Button Ring */
 .newsletter-submit-btn {
-  position: relative;
   overflow: hidden;
 }
 
