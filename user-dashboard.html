@@ -739,7 +739,7 @@
               <div class="dash-card-header">
                 <h3>Personal Information</h3>
               </div>
-              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+              <form id="personalInfoForm" class="dash-settings-form">
                 <div class="form-group">
                   <label>Full Name</label>
                   <input type="text" class="form-control" value="James Mitchell">
@@ -756,6 +756,7 @@
                   <label>Company</label>
                   <input type="text" class="form-control" value="TerraGrow Industries">
                 </div>
+                <div class="dash-form-msg" style="display:none; color:#e74c3c; font-size:0.85rem; margin-top:8px;"></div>
                 <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Save Changes</button>
               </form>
             </div>
@@ -764,7 +765,7 @@
               <div class="dash-card-header">
                 <h3>Security</h3>
               </div>
-              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+              <form id="updatePasswordForm" class="dash-settings-form">
                 <div class="form-group">
                   <label>Current Password</label>
                   <input type="password" class="form-control" placeholder="Enter current password">
@@ -777,6 +778,7 @@
                   <label>Confirm New Password</label>
                   <input type="password" class="form-control" placeholder="Confirm new password">
                 </div>
+                <div class="dash-form-msg" style="display:none; color:#e74c3c; font-size:0.85rem; margin-top:8px;"></div>
                 <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Update Password</button>
               </form>
 

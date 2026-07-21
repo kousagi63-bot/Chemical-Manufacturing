@@ -1150,7 +1150,7 @@
               <div class="dash-card-header">
                 <h3>General Settings</h3>
               </div>
-              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+              <form id="adminSettingsForm" class="dash-settings-form">
                 <div class="form-group">
                   <label>Company Name</label>
                   <input type="text" class="form-control" value="ChemManufacture Inc.">
@@ -1176,6 +1176,7 @@
                     <option>UTC</option>
                   </select>
                 </div>
+                <div class="dash-form-msg" style="display:none; color:#e74c3c; font-size:0.85rem; margin-top:8px;"></div>
                 <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Save Settings</button>
               </form>
             </div>
@@ -1184,7 +1185,7 @@
               <div class="dash-card-header">
                 <h3>Security & Access</h3>
               </div>
-              <form class="dash-settings-form" onsubmit="window.location.href='404.html'; return false;">
+              <form id="adminPasswordForm" class="dash-settings-form">
                 <div class="form-group">
                   <label>Admin Password</label>
                   <input type="password" class="form-control" placeholder="Enter current password">
@@ -1193,6 +1194,7 @@
                   <label>New Password</label>
                   <input type="password" class="form-control" placeholder="Enter new password">
                 </div>
+                <div class="dash-form-msg" style="display:none; color:#e74c3c; font-size:0.85rem; margin-top:8px;"></div>
                 <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Update Password</button>
               </form>
 
